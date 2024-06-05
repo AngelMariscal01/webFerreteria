@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería El Hogar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .header a:hover {
+            color: #ccc;
+        }
+        .search-bar {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 50%;
+            margin: 20px auto;
+        }
+        .search-bar input[type="search"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .search-bar input[type="search"]:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .categories {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .categories a {
+            margin: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .categories a:hover {
+            color: #666;
+        }
+        .product-of-the-day {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .product-of-the-day img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #ccc;
+        }
+        .login-options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .btn-login, .btn-login-admin {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-login:hover, .btn-login-admin:hover {
+            background-color: #444;
+        }
+        .dropdown, .dropdown-admin {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content, .dropdown-content-admin {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content, .dropdown-admin:hover .dropdown-content-admin {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Ferretería Tornillitos XD</h1>
+        <p>Tu tienda de confianza para herramientas y materiales</p>
+        <a href="#">Herramientas</a>
+        <a href="#">Materiales de construcción</a>
+        <a href="#">Iluminación</a>
+        <a href="#">Pinturas y decoración</a>
+        <a href="#">Accesorios</a>
+        <a href="#">Ofertas especiales</a>
+        <div class="login-options">
+            <button class="btn-login">Iniciar sesión como usuario</button>
+            <button class="btn-login-admin">Iniciar sesión como administrador</button>
+        </div>
+    </header>
+    <div class="search-bar">
+        <input type="search" placeholder="Buscar productos">
+    </div>
+    <div class="categories">
+        <a href="#">Herramientas eléctricas</a>
+        <a href="#">Herramientas manuales</a>
+        <a href="#">Materiales de construcción</a>
+        <a href="#">Iluminación LED</a>
+        <a href="#">Pinturas y barnices</a>
+        <a href="#">Accesorios para el hogar</a>
+        <a href="#">Jardinería</a>
+        <a href="#">Decoración</a>
+    </div>
+    <div class="product-of-the-day">
+        <img src="img\ferre.jpeg" alt="Producto del día">
+        <p>Producto del día: Taladro eléctrico de alta potencia</p>
+    </div>
+    <footer class="footer">
+        <p>Ferretería El Hogar</p>
+        <p>Tu tienda de confianza para herramientas y materiales</p>
+        <p>Atención al cliente: 555-1234</p>
+        <a href="#">Política de devoluciones</a>
+        <p>© 2023 Ferretería El Hogar. Todos los derechos reservados.</p>
+    </footer>
+    <!-- Dropdown para login de usuario -->
+    <div class="dropdown">
+        <div class="dropdown-content">
+            <form action="#" method="post">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="Iniciar sesión">
+            </form>
+        </div>
+    </div>
+    <!-- Dropdown para login de administrador -->
+    <div class="dropdown-admin">
+        <div class="dropdown-content-admin">
+            <form action="#" method="post">
+                <label for="admin-username">Administrador:</label>
+                <input type="text" id="admin-username" name="admin-username"><br><br>
+                <label for="admin-password">Contraseña:</label>
+                <input type="password" id="admin-password" name="admin-password"><br><br>
+                <input type="submit" value="Iniciar sesión como administrador">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
